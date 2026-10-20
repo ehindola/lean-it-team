@@ -1,5 +1,6 @@
-# Block web access to the git repo and docs
-RedirectMatch 404 /\.git
-<FilesMatch "^(README\.md|\.gitignore)$">
-  Require all denied
-</FilesMatch>
+# Hide the git repo and docs from the web. mod_rewrite form (LiteSpeed-friendly).
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (^|/)\.git(/|$) - [R=404,L]
+RewriteRule ^(README\.md|\.gitignore)$ - [R=404,L]
+</IfModule>
