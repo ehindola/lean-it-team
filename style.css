@@ -2,11 +2,11 @@
 Theme Name: Lean IT
 Theme URI:
 Author: Peter
-Description: Hand-built, page-builder-free block theme for an IT support business. No jQuery, no web fonts, no bloat.
+Description: Hand-built, page-builder-free block theme for pgxtudio. No jQuery, no web fonts, no bloat.
 Requires at least: 6.5
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 8.0
-Version: 0.1.0
+Version: 0.2.0
 License: GPL-2.0-or-later
 Text Domain: lean-it
 */
@@ -18,13 +18,117 @@ Text Domain: lean-it
 	outline: 2px solid var(--wp--preset--color--accent);
 	outline-offset: 3px;
 }
-.skip-link:focus { position: fixed; top: 1rem; left: 1rem; z-index: 999; background: #fff; padding: .5rem 1rem; }
+
+/* ---------- Header ---------- */
+.pgx-logo { display: block; line-height: 0; }
+.pgx-logo img { height: 30px; width: auto; }
+.pgx-header .pgx-nav a { color: var(--wp--preset--color--muted); text-decoration: none; }
+.pgx-header .pgx-nav a:hover { color: var(--wp--preset--color--contrast); }
+.home .pgx-header { background: var(--wp--preset--color--surface); }
+.pgx-header-cta .wp-block-button__link {
+	padding: .55rem 1.1rem;
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 12%, transparent);
+	color: var(--wp--preset--color--accent);
+}
+.pgx-header-cta .wp-block-button__link:hover { background: var(--wp--preset--color--accent); color: #fff; }
+@media (max-width: 781px) {
+	.pgx-header-cta { display: none; }
+}
+
+/* ---------- Hero ---------- */
+.pgx-hero {
+	position: relative;
+	min-height: min(88vh, 860px);
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+	padding-bottom: clamp(3rem, 7vw, 6rem);
+	background-image: url("assets/images/hero-network.svg");
+	background-repeat: no-repeat;
+	background-position: right -4vw top 4.5rem;
+	background-size: min(1400px, 92vw) auto;
+	overflow: hidden;
+}
+.pgx-hero > .pgx-hero-copy { margin-top: auto; }
+.pgx-hero h1 { max-width: 24ch; margin-bottom: 1.75rem; text-wrap: balance; }
+.pgx-hero .pgx-hero-cta p { margin: 0; line-height: 1.5; }
+
+.pgx-pill { margin: .5rem auto 0; }
+.pgx-pill a {
+	display: inline-flex; align-items: center; gap: .6rem;
+	padding: .45rem 1rem;
+	border-radius: 999px;
+	background: color-mix(in srgb, var(--wp--preset--color--accent) 10%, #fff);
+	color: var(--wp--preset--color--accent);
+	font-size: var(--wp--preset--font-size--small);
+	text-decoration: none;
+	box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--wp--preset--color--accent) 18%, transparent);
+}
+.pgx-pill a:hover { background: #fff; }
+.pgx-dots { display: inline-flex; gap: 3px; }
+.pgx-dots::before, .pgx-dots::after {
+	content: ""; width: 9px; height: 9px; border-radius: 50%;
+	background: var(--wp--preset--gradient--brand);
+}
+
+@media (max-width: 781px) {
+	.pgx-hero {
+		min-height: 0;
+		padding-top: 1rem;
+		background-position: center top 4.5rem;
+		background-size: 150vw auto;
+	}
+	.pgx-hero > .pgx-hero-copy { margin-top: 62vw; }
+}
+
+/* ---------- Sections ---------- */
+.pgx-eyebrow {
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 600;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: var(--wp--preset--color--moss);
+	margin-bottom: .5rem;
+}
+.pgx-num {
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--olive);
+	margin: 0;
+}
 
 .lean-card {
 	border: 1px solid var(--wp--preset--color--line);
-	border-radius: 10px;
+	border-radius: 16px;
 	padding: var(--wp--preset--spacing--40);
 	background: var(--wp--preset--color--base);
+	transition: border-color .2s, transform .2s;
+}
+.lean-card:hover { border-color: var(--wp--preset--color--olive); transform: translateY(-2px); }
+
+.pgx-steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+.pgx-steps li {
+	counter-increment: step;
+	position: relative;
+	padding: 1.25rem 0 1.25rem 3.5rem;
+	border-top: 1px solid var(--wp--preset--color--line);
+}
+.pgx-steps li::before {
+	content: counter(step, decimal-leading-zero);
+	position: absolute; left: 0; top: 1.3rem;
+	font-family: var(--wp--preset--font-family--mono);
+	font-size: var(--wp--preset--font-size--small);
+	color: var(--wp--preset--color--moss);
+}
+
+.pgx-cta h2 { margin: 0; }
+
+/* ---------- Footer ---------- */
+.pgx-brand-rule {
+	height: 3px;
+	border-radius: 3px;
+	margin-top: var(--wp--preset--spacing--40);
+	background: var(--wp--preset--gradient--brand);
 }
 
 @media (prefers-reduced-motion: reduce) {
