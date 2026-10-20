@@ -1,0 +1,32 @@
+/*
+Theme Name: Lean IT
+Theme URI:
+Author: Peter
+Description: Hand-built, page-builder-free block theme for an IT support business. No jQuery, no web fonts, no bloat.
+Requires at least: 6.5
+Tested up to: 6.8
+Requires PHP: 8.0
+Version: 0.1.0
+License: GPL-2.0-or-later
+Text Domain: lean-it
+*/
+
+/* Almost all styling lives in theme.json. This file only holds what theme.json can't express. */
+
+:where(a) { text-underline-offset: 0.2em; }
+:where(a:focus-visible, button:focus-visible) {
+	outline: 2px solid var(--wp--preset--color--accent);
+	outline-offset: 3px;
+}
+.skip-link:focus { position: fixed; top: 1rem; left: 1rem; z-index: 999; background: #fff; padding: .5rem 1rem; }
+
+.lean-card {
+	border: 1px solid var(--wp--preset--color--line);
+	border-radius: 10px;
+	padding: var(--wp--preset--spacing--40);
+	background: var(--wp--preset--color--base);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* { scroll-behavior: auto !important; transition: none !important; }
+}

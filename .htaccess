@@ -1,0 +1,5 @@
+# Block web access to the git repo and docs
+RedirectMatch 404 /\.git
+<FilesMatch "^(README\.md|\.gitignore)$">
+  Require all denied
+</FilesMatch>
