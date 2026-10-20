@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -2 747 64" role="img" aria-label="Services">
+<g fill="none" stroke="#E6EBD9" stroke-width="19" stroke-linejoin="round" stroke-linecap="butt">
+<path transform="translate(0 0)" d="M92 9.5 H23.5 Q9.5 9.5 9.5 21.5 Q9.5 30.0 23.5 30.0 H68.5 Q82.5 30.0 82.5 42.0 V38.5 Q82.5 50.5 68.5 50.5 H0"/>
+<path transform="translate(106 0)" d="M86 9.5 H23.5 Q9.5 9.5 9.5 23.5 V36.5 Q9.5 50.5 23.5 50.5 H86"/>
+<path transform="translate(106 0)" d="M9.5 30.0 H72"/>
+<path transform="translate(206 0)" d="M9.5 60 V23.5 Q9.5 9.5 23.5 9.5 H68.5 Q82.5 9.5 82.5 20.5 V20.0 Q82.5 31.0 68.5 31.0 H9.5"/>
+<path transform="translate(206 0)" d="M62 31.0 L82.5 60"/>
+<path transform="translate(312 0)" d="M9.5 0 V26.5 L33.5 50.5 H62.5 L86.5 26.5 V0"/>
+<path transform="translate(422 0)" d="M9.5 0 V60"/>
+<path transform="translate(455 0)" d="M86 9.5 H23.5 Q9.5 9.5 9.5 23.5 V36.5 Q9.5 50.5 23.5 50.5 H86"/>
+<path transform="translate(555 0)" d="M86 9.5 H23.5 Q9.5 9.5 9.5 23.5 V36.5 Q9.5 50.5 23.5 50.5 H86"/>
+<path transform="translate(555 0)" d="M9.5 30.0 H72"/>
+<path transform="translate(655 0)" d="M92 9.5 H23.5 Q9.5 9.5 9.5 21.5 Q9.5 30.0 23.5 30.0 H68.5 Q82.5 30.0 82.5 42.0 V38.5 Q82.5 50.5 68.5 50.5 H0"/>
+</g></svg>
