@@ -6,7 +6,7 @@ Description: Hand-built, page-builder-free block theme for pgxtudio. No jQuery, 
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.0
-Version: 0.2.2
+Version: 0.2.3
 License: GPL-2.0-or-later
 Text Domain: lean-it
 */
@@ -35,7 +35,7 @@ Text Domain: lean-it
 }
 .pgx-header-cta .wp-block-button__link:hover { background: var(--wp--preset--color--accent); color: #fff; }
 @media (max-width: 781px) {
-	.pgx-header-cta { display: none; }
+	.pgx-header .wp-block-buttons.pgx-header-cta { display: none; }
 }
 
 /* ---------- Hero ---------- */
@@ -82,6 +82,8 @@ Text Domain: lean-it
 		background-size: 150vw auto;
 	}
 	.pgx-hero > .pgx-hero-copy { margin-top: 62vw; }
+	.pgx-pill a { font-size: .8rem; padding: .4rem .85rem; }
+	.pgx-hide-sm { display: none; }
 }
 
 /* ---------- Sections ---------- */
